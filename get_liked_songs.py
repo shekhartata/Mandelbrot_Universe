@@ -29,7 +29,8 @@ def get_track_features(list_tracks, sp):
             acousticness=f['acousticness'],
             tempo=f['tempo'],
             liveness=f['liveness'],
-            valence=f['valence']
+            valence=f['valence'],
+            instrumentalness=f['instrumentalness']
         ))
     return tracks_with_features
 
