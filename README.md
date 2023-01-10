@@ -26,7 +26,9 @@ Directives on how to run the server and driver script:
 
 2. Caller script to fetch spotify data and call the server -> <br/><br/> Get the user client id and client secret from spotify development API and insert that
 in the authentication codeflow of the script.
-<br/>
+
+The model as of now is capable of predicting only 3 moods based on the track list provided - upbeat / entropic, thoughtful and energetic. 
+<br/><br/>
 NOTE -> The work done here is open to development and suggestions. Feel free to clone/raise PR with further improvements. 
 The model used here is inspired in part from the work done by <strong>Sylvester Cardorelle</strong> (https://github.com/SylCard/Spotify-Emotions-Project), who
 has also written an exquisite article on the same (https://towardsdatascience.com/predicting-my-mood-using-my-spotify-data-2e898add122a). <br/>
