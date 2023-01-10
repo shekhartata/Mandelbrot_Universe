@@ -43,8 +43,8 @@ def get_all_liked_songs_list():
     sp = spotipy.Spotify(
         auth_manager=SpotifyOAuth(
             redirect_uri="http://localhost:8000/controller/callback/",
-            client_id="73ab81e228b842b58fb8f3d567522aa0",
-            client_secret="f6dd237dd86c478dbd89d15df2b9cf18",
+            client_id="Insert Client Id",
+            client_secret="Insert Client secret",
             scope="user-library-read user-library-modify playlist-modify-private "
                   "playlist-modify-public user-follow-read user-read-recently-played"
         )
