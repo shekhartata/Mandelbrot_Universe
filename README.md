@@ -15,4 +15,20 @@ mood predictions along with the datetime stamp.
 
 The database used here is apache cassandra which is essentially a NoSQL dB capable of high end performance offering high scalability.
 
-NOTE -> The work done here is open to improvements and suggestions. Feel free to clone/raise PR with further improvements and suggestions.
+Directives on how to run the server and driver script:
+
+1. Django server hosting the model -> <br/><br/> a. Create a venv, install django and then clone the server codebase (mood_tracker/) <br/>
+                                      b. Start a venv - venv/Scripts/activate.bat <br/>
+                                      c. Install apache-cassandra and start a cassandra dB session by running bin/run-cassandra.bat 
+                                         file in the installation directory <br/>
+                                      d. Run dB migrations for cassandra using python manage.py sync_cassandra in the django server directory <br/>
+                                      e. Start the django server with python manage.py runserver, which by default starts at localhost:8000 <br/>
+
+2. Caller script to fetch spotify data and call the server -> <br/><br/> Get the user client id and client secret from spotify development API and insert that
+in the authentication codeflow of the script.
+<br/>
+NOTE -> The work done here is open to development and suggestions. Feel free to clone/raise PR with further improvements. 
+The model used here is inspired in part from the work done by <strong>Sylvester Cardorelle</strong> (https://github.com/SylCard/Spotify-Emotions-Project), who
+has also written an exquisite article on the same (https://towardsdatascience.com/predicting-my-mood-using-my-spotify-data-2e898add122a). <br/>
+It is a Multi-Layer Perceptron (MLP) based deep learning algorithm driven by K-means clustering.
+Besides, as part of future track work plan is to have the model hosted as a containerised service, so that's another area to work upon.
