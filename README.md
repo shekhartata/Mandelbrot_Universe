@@ -1,10 +1,13 @@
 # Mandelbrot_Universe
 
-This repository contains code for an MLP based music mood predictor which takes in the 
-spotify recently played 50 tracks and describes the recent music mood you've been in !
+This repository contains code for a Multi-Layer Perceptron (MLP) based music mood predictor which takes in the 
+user's recently played 50 tracks on spotify and describes the recent music mood you've been in !
 
-The codebase consists of a django based server which hosts the MLP amodel - which trains upon service startup and
-gets pickled, which can then be unloaded and run against the test data each time we make a POST call to the server
+The training dataset used here is available on Kaggle (https://www.kaggle.com/datasets/mrmorj/dataset-of-songs-in-spotify).
+The model is run against the test data which is fetched from Spotify API (https://developer.spotify.com/documentation/web-api/). 
+
+The codebase consists of a django based server hosting the MLP model - which trains upon service startup and is then
+unloaded and run against the test data each time we make a POST call to the server
 (http://localhost:port/controller/callback/).
 
 Besides, there is a caller script - get_liked_songs.py which acts as the driver script - making spotify API calls to
