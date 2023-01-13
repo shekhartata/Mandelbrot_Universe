@@ -47,8 +47,8 @@ if not os.path.isfile('trained_model_obj'):
     y_kmeans = kmeans.predict(songs_features)
     y = y_kmeans
 
-    # Doing test-train split of 95% training data and 5% testing data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05)
+    # Doing test-train split of 75% training data and 25% testing data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
     songs['label'] = y_kmeans
 
     # Fitting MLP model
